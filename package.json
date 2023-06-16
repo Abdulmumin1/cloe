@@ -1,0 +1,24 @@
+{
+  "name": "cleo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "css": "npx tailwindcss -i ./src/tailwind.css -o ./src/app.css --watch"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.12",
+    "@sveltejs/vite-plugin-svelte": "^2.0.4",
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "svelte": "^3.58.0",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "openai": "^3.3.0"
+  }
+}
