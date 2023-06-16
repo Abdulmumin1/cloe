@@ -3,7 +3,7 @@
   let selectedOption = "Explain this";
 
   const configuration = new Configuration({
-    apiKey: "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",
+    apiKey: "YOUR_API_KEY",
   });
   const openai = new OpenAIApi(configuration);
 
