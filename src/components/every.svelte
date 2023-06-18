@@ -32,9 +32,13 @@
     event.target.style.height = "auto";
     event.target.style.height = event.scrollHeight + "px";
   }
+  function hideMe() {}
 </script>
 
-<div class=" p-4 bg-[#333] text-orange-50 w-[20rem] flex flex-col rounded-xl">
+<div class=" p-4 w-[20rem] flex flex-col rounded-xl pr-6">
+  <!-- <div class="flex justify-end">
+    <button class="">X</button>
+  </div> -->
   <div class="inline-block">
     <!-- <h1>Cloe</h1> -->
     <i>Clever AI patner</i>
@@ -43,13 +47,13 @@
   <textarea
     bind:value={inputText}
     on:input={handleInput}
-    class="bg-inherit border-2 rounded-lg mb-2 border-gray-600 h-20"
+    class="bg-inherit border-2 p-1 rounded-lg mb-2 border-gray-600 h-32"
   />
 
   <div class="flex items-center space-x-2">
     <div class="flex items-center space-x-4 h-full">
       <label
-        class="inline-flex cursor-pointer items-center bg-orange-200 border-black rounded-full p-2"
+        class="inline-flex shadow-md cursor-pointer items-center bg-orange-200 border-black rounded-full p-2"
       >
         <input
           type="radio"
@@ -62,7 +66,7 @@
         <span class="ml-2 text-black">Explain</span>
       </label>
       <label
-        class="inline-flex cursor-pointer items-center bg-rose-600 border-black rounded-full p-2"
+        class="inline-flex shadow-md cursor-pointer items-center bg-blue-600 border-black rounded-full p-2"
       >
         <input
           type="radio"
@@ -75,15 +79,17 @@
         <span class="ml-2">Summarize</span>
       </label>
     </div>
-    <button
-      id="getSelectedText"
-      on:click={print_me}
-      class="text-xl w-full h-full bg-green-300 text-gray-900 rounded-lg hover:bg-gray-500 transition-transform transform hover:scale-105"
-    >
-      Go
-    </button>
   </div>
-  <p id="result" class="rounded-lg bg-[#444] mt-2 p-2">{result}</p>
+  <button
+    id="getSelectedText"
+    on:click={print_me}
+    class="shadow-md w-full py-2 mt-3 bg-green-300 text-gray-900 rounded-lg hover:bg-green-500 transition-transform transform hover:scale-105"
+  >
+    Go
+  </button>
+  <p id="result" class="shadow-md rounded-lg bg-gray-200 mt-2 p-2">
+    {result}
+  </p>
 </div>
 
 <style>
@@ -100,12 +106,12 @@
 
   /* Handle */
   textarea::-webkit-scrollbar-thumb {
-    background-color: rgb(75 85 99);
+    background-color: rgb(230, 230, 230);
     border-radius: 4px;
   }
 
   /* Handle on hover */
   textarea::-webkit-scrollbar-thumb:hover {
-    background-color: rgb(75 85 99);
+    background-color: rgb(164, 164, 165);
   }
 </style>
